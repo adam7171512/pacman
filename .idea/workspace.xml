@@ -5,39 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d5c1625-68d3-4598-ba61-199bc178e318" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacCellRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacGameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacNumberCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacNumberCellRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/StatsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/StatsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/FreezeAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/FreezeAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/GhostKilledAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/GhostKilledAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/IAnimated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/IAnimated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/MagicPotionAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/MagicPotionAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PacKilledAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PacKilledAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PointsAddedAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PointsAddedAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ScoreMultiplierAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ScoreMultiplierAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ShieldAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ShieldAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/TurboAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/TurboAnimation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Ghost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Npc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Pac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Pac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Apple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Dynamite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Dynamite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/MagicPotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/MagicPotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Numbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Shield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Shield.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/CellPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/CellPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/MazeAlgo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/MazeAlgo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/RouteFindingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/RouteFindingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Clock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Clock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +181,7 @@
       <updated>1683901780929</updated>
       <workItem from="1683901782319" duration="25304000" />
       <workItem from="1684013926926" duration="1203000" />
-      <workItem from="1684065092515" duration="5691000" />
+      <workItem from="1684065092515" duration="7700000" />
     </task>
     <servers />
   </component>

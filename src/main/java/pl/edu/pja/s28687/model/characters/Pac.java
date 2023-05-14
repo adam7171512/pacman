@@ -107,4 +107,8 @@ public class Pac extends GameCharacter implements Runnable {
         }
     }
 
+    public void addTime(int seconds){
+        gameModel.addTime(seconds);
+    }
+
 }

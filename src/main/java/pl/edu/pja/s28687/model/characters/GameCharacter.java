@@ -126,6 +126,11 @@ public abstract class GameCharacter extends GameObject implements Runnable {
 
         int time = 0;
         Cell nextCell = getNextCell();
+        Cell currentCell = getCurrentCell();
+
+        if (nextCell == null || currentCell == null) {
+            return 0;
+        }
 
         dx = nextCell.getCol() - currentCell.getCol();
         dy = nextCell.getRow() - currentCell.getRow();

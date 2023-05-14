@@ -308,4 +308,8 @@ public class GameModel {
             }
         }).start();
     }
+
+    public void addTime(int seconds) {
+        timeLeft += seconds;
+    }
 }

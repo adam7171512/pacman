@@ -27,6 +27,7 @@ public class Clock extends Collectable {
     @Override
     public IAnimated affectPac(Pac pac) {
         pac.freezeEnemies();
+        pac.addTime(10);
         return new FreezeAnimation();
     }
 
