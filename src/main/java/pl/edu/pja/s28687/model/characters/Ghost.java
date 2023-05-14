@@ -5,6 +5,7 @@ import pl.edu.pja.s28687.gui.animations.IRenderingInstructions;
 import pl.edu.pja.s28687.model.GameModel;
 import pl.edu.pja.s28687.model.collectables.Collectable;
 import pl.edu.pja.s28687.model.collectables.CollectableFactory;
+import pl.edu.pja.s28687.model.logistics.Cell;
 
 public class Ghost extends Npc {
 
@@ -16,8 +17,9 @@ public class Ghost extends Npc {
 
     @Override
     protected void dropItem() {
-        Collectable collectable = CollectableFactory.createRandomCollectable();
+        Cell currentCell = getCurrentCell();
         if (currentCell != null) {
+            Collectable collectable = CollectableFactory.createRandomCollectable();
             currentCell.addCollectable(collectable);
         }
     }
