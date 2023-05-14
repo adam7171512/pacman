@@ -14,7 +14,7 @@ public class MainMenu {
 
     static {
         try {
-            backgroundImage = ImageIO.read(Objects.requireNonNull(MainMenu.class.getResource("/background.png")));
+            backgroundImage = ImageIO.read(Objects.requireNonNull(MainMenu.class.getResource("/mainmenu.png")));
         } catch (IOException e) {
             throw new RuntimeException("Failed to load image", e);
         }
@@ -23,12 +23,13 @@ public class MainMenu {
     private JFrame frame;
     private JButton startButton;
     private JButton scoreButton;
+    private JButton exitButton;
     private final MainMenu mainMenu;
 
 
     private static final double X_BUTTONS_RATIO = 0.3;
     private static final double Y_BUTTON1_RATIO = 0.36;
-    private static final double Y_BUTTON2_RATIO = 0.54;
+    private static final double BUTTONS_VERTICAL_SPACING_RATIO = 0.04;
     private static final double BUTTON_WIDTH_RATIO = 0.375;
     private static final double BUTTON_HEIGHT_RATIO = 0.15;
 
@@ -93,21 +94,36 @@ public class MainMenu {
             }
         };
 
+        exitButton = new JButton("Exit") {
+            {
+                setOpaque(false);
+                addActionListener(e -> {
+                    System.exit(0);
+                });
+            }
+
+            @Override
+            public void paint(Graphics g) {
+            }
+        };
+
         panel.add(startButton);
         panel.add(scoreButton);
+        panel.add(exitButton);
 
         panel.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
                 int xBound = (int) (frame.getWidth() * X_BUTTONS_RATIO);
                 int yBound1 = (int) (frame.getHeight() * Y_BUTTON1_RATIO);
-                int yBound2 = (int) (frame.getHeight() * Y_BUTTON2_RATIO);
+                int yBound2 = (int) (frame.getHeight() * (Y_BUTTON1_RATIO + BUTTON_HEIGHT_RATIO + BUTTONS_VERTICAL_SPACING_RATIO));
+                int yBound3 = (int) (frame.getHeight() * (Y_BUTTON1_RATIO + 2 * BUTTON_HEIGHT_RATIO + 2 * BUTTONS_VERTICAL_SPACING_RATIO));
                 int width = (int) (frame.getWidth() * BUTTON_WIDTH_RATIO);
                 int height = (int) (frame.getHeight() * BUTTON_HEIGHT_RATIO);
                 startButton.setBounds(xBound, yBound1, width, height);
                 scoreButton.setBounds(xBound, yBound2, width, height);
+                exitButton.setBounds(xBound, yBound3, width, height);
                 super.componentResized(e);
-
             }
         });
     }
