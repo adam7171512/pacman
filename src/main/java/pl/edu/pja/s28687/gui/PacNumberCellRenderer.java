@@ -10,8 +10,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 import java.awt.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Deque;
 
 public class PacNumberCellRenderer extends DefaultTableCellRenderer implements TableCellRenderer {
     private Cell cell;
@@ -41,10 +40,10 @@ public class PacNumberCellRenderer extends DefaultTableCellRenderer implements T
         } else if (cell.getPac() != null) {
             g2d.setColor(Color.RED);
             g2d.drawString("1", cellSize / 2, cellSize / 2);
-        } else if (!cell.getNpcs().isEmpty()) {
+        } else if (!cell.getGameCharacters().isEmpty()) {
             g2d.drawString("2", cellSize / 2, cellSize / 2);
         } else if (!cell.getCollectables().isEmpty()) {
-            Set<Collectable> collectableSet = new HashSet<>(cell.getCollectables());
+            Deque<Collectable> collectableSet = cell.getCollectables();
             if (collectableSet.stream().anyMatch(collectable -> collectable instanceof Numbers)) {
                 g2d.drawString("321", cellSize / 2, cellSize / 2);
             } else if (collectableSet.stream().anyMatch(collectable -> collectable instanceof Flip)) {

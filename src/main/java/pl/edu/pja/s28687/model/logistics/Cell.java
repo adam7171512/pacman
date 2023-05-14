@@ -86,10 +86,6 @@ public class Cell {
         collectables.add(collectable);
     }
 
-    public Map<Npc, Coordinates> getNpcs() {
-        return npcs;
-    }
-
     public Deque<Collectable> getCollectables() {
         return collectables;
     }
@@ -106,20 +102,17 @@ public class Cell {
         }
     }
 
-//    @Override
-//    public String toString() {
-//        return "Cell at " + row + ", "
-//                + col + " with " + collectables.size()
-//                + " collectables and " + npcs.size() + " npcs"
-//                + " and " + (pacPos != null ? "pac" : "no pac");
-//    }
+    public Map<GameCharacter, Coordinates> getGameCharacters() {
+        Map<GameCharacter, Coordinates> gameCharacters = new HashMap<>();
+        if (pacPos != null) {
+            gameCharacters.put(pacPos.getKey(), pacPos.getValue());
+        }
+        gameCharacters.putAll(npcs);
+        return gameCharacters;
+    }
 
     public Pac getPac() {
         return pac;
-    }
-
-    public Map.Entry<Pac, Coordinates> getPacPos() {
-        return pacPos;
     }
 
     public boolean needsRepaint() {

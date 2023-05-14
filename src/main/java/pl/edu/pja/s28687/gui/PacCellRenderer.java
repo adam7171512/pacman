@@ -1,6 +1,7 @@
 package pl.edu.pja.s28687.gui;
 
 import pl.edu.pja.s28687.gui.animations.IAnimated;
+import pl.edu.pja.s28687.model.characters.GameCharacter;
 import pl.edu.pja.s28687.model.characters.Npc;
 import pl.edu.pja.s28687.model.characters.Pac;
 import pl.edu.pja.s28687.model.collectables.Collectable;
@@ -58,17 +59,10 @@ public class PacCellRenderer extends DefaultTableCellRenderer implements TableCe
             collectable.draw(g2d, cellSize);
         }
 
-        for (Map.Entry<Npc, Coordinates> entry : cell.getNpcs().entrySet()) {
-            Npc npc = entry.getKey();
+        for (Map.Entry<GameCharacter, Coordinates> entry : cell.getGameCharacters().entrySet()) {
+            GameCharacter gameCharacter = entry.getKey();
             Coordinates coordinates = entry.getValue();
-            npc.render(coordinates, g2d, cellSize);
-        }
-
-        Map.Entry<Pac, Coordinates> pacPos = cell.getPacPos();
-        if (pacPos != null) {
-            Pac pac = pacPos.getKey();
-            Coordinates coordinates = pacPos.getValue();
-            pac.render(coordinates, g2d, cellSize);
+            gameCharacter.render(coordinates, g2d, cellSize);
         }
 
         Iterator<IAnimated> iterator = cell.getObjectsToAnimate().iterator();
