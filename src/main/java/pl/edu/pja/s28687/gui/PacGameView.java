@@ -15,7 +15,6 @@ import java.time.LocalDate;
 public class PacGameView {
 
     private static double defaultFrameWidth = 1920;
-    private static double defaultFrameHeight = 1080;
     private static double defaultBoardHeight = 900;
     private double aspectRatio;
     private JFrame frame;
@@ -73,19 +72,19 @@ public class PacGameView {
         pacTable.addKeyListener(new PacKeyListener(gameModel));
 
         //Todo: it works on mac but doesn't work well on windows, try to fix it.
-        frame.addComponentListener(new ComponentAdapter() {
-            private Rectangle rectangle = frame.getBounds();
-
-            @Override
-            public void componentResized(ComponentEvent e) {
-                Rectangle newRectangle = e.getComponent().getBounds();
-                if (rectangle.equals(newRectangle)) {
-                    return;
-                }
-                rectangle = newRectangle;
-                e.getComponent().setBounds(newRectangle.x, newRectangle.y, newRectangle.width, (int) (newRectangle.width / aspectRatio));
-            }
-        });
+//        frame.addComponentListener(new ComponentAdapter() {
+//            private Rectangle rectangle = frame.getBounds();
+//
+//            @Override
+//            public void componentResized(ComponentEvent e) {
+//                Rectangle newRectangle = e.getComponent().getBounds();
+//                if (rectangle.equals(newRectangle)) {
+//                    return;
+//                }
+//                rectangle = newRectangle;
+//                e.getComponent().setBounds(newRectangle.x, newRectangle.y, newRectangle.width, (int) (newRectangle.width / aspectRatio));
+//            }
+//        });
 
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);

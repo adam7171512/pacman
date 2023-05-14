@@ -27,14 +27,14 @@ public class Flip extends Collectable {
 
     @Override
     public IAnimated affectPac(Pac pac) {
-        pac.flip();
-        pac.multiplyPointsMultiplier(MULTIPLIER);
+        pac.flipBoard();
+        pac.multiplyScoreMultiplier(MULTIPLIER);
         pac.addPoints(10);
         new Thread(() -> {
             try {
                 Thread.sleep(7000);
-                pac.flip();
-                pac.multiplyPointsMultiplier((double) 1 /MULTIPLIER);
+                pac.flipBoard();
+                pac.multiplyScoreMultiplier((double) 1 /MULTIPLIER);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

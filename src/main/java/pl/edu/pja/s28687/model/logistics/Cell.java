@@ -106,13 +106,13 @@ public class Cell {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Cell at " + row + ", "
-                + col + " with " + collectables.size()
-                + " collectables and " + npcs.size() + " npcs"
-                + " and " + (pacPos != null ? "pac" : "no pac");
-    }
+//    @Override
+//    public String toString() {
+//        return "Cell at " + row + ", "
+//                + col + " with " + collectables.size()
+//                + " collectables and " + npcs.size() + " npcs"
+//                + " and " + (pacPos != null ? "pac" : "no pac");
+//    }
 
     public Pac getPac() {
         return pac;

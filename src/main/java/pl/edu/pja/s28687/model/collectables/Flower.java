@@ -28,11 +28,11 @@ public class Flower extends Collectable {
     @Override
     public IAnimated affectPac(Pac pac) {
         pac.lureEnemies();
-        pac.multiplyPointsMultiplier(MULTIPLIER);
+        pac.multiplyScoreMultiplier(MULTIPLIER);
         new Thread(() -> {
             try {
                 Thread.sleep(5000);
-                pac.multiplyPointsMultiplier(0.5);
+                pac.multiplyScoreMultiplier(0.5);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -42,6 +42,6 @@ public class Flower extends Collectable {
 
     @Override
     public void draw(Graphics g, int cellSize) {
-        g.drawImage(icon, 0, 0, cellSize,cellSize, null);
+        g.drawImage(icon, 0, 0, cellSize, cellSize, null);
     }
 }

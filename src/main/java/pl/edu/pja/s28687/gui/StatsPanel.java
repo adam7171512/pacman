@@ -118,10 +118,4 @@ public class StatsPanel {
         livesLabel.setText("\u2665".repeat(lives));
     }
 
-    public void updateStats(int score, int multiplier, int time, int lives) {
-        updateScore(score, multiplier);
-        updateTime(time);
-        updateLives(lives);
-    }
-
 }

@@ -65,6 +65,6 @@ public class PacTable extends JTable {
             int y = this.getHeight() / 2;
             g2d.rotate(Math.toRadians(180.0), x, y);
         }
-        super.paintComponent(g);
+        super.paintComponent(g2d);
     }
 }

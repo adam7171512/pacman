@@ -1,10 +1,10 @@
 package pl.edu.pja.s28687.gui;
 
-import pl.edu.pja.s28687.model.logistics.Cell;
 import pl.edu.pja.s28687.model.collectables.Collectable;
 import pl.edu.pja.s28687.model.collectables.Flip;
 import pl.edu.pja.s28687.model.collectables.Food;
 import pl.edu.pja.s28687.model.collectables.Numbers;
+import pl.edu.pja.s28687.model.logistics.Cell;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;

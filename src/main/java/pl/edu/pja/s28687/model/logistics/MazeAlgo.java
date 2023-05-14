@@ -122,8 +122,8 @@ public class MazeAlgo {
                     for (int j = 0; j < y; j++) {
                         CellNode cellNode = cellArray[i][j];
                         if (cellNode.isWall) continue;
-                        int maxBlocks = (int) (Math.random() * 3) + 2;
-//                        int maxBlocks = 3;
+//                        int maxBlocks = (int) (Math.random() * 3) + 2;
+                        int maxBlocks = 3;
                         List<CellNode> neighbours = recursiveNeighbourFind(cellNode, cellArray, new LinkedList<>(), maxBlocks, new HashSet<>());
                         if (neighbours.size() >= 2) {
                             for (CellNode c : neighbours) {

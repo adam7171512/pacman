@@ -10,7 +10,7 @@ public class TurboAnimation implements IAnimated {
         animationFrames = 200;
         startingFrames = animationFrames;
     }
-    public void animEffect(Graphics g, int cellSize) {
+    public void render(Graphics g, int cellSize) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setStroke(new BasicStroke((float) (cellSize/5.0)));
         g2d.setFont(new Font("Arial", Font.PLAIN, cellSize/5));

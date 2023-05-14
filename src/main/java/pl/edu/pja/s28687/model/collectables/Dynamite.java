@@ -26,7 +26,7 @@ public class Dynamite extends Collectable {
 
     @Override
     public IAnimated affectPac(Pac pac) {
-        pac.killAll();
+        pac.blowUpNpc();
         int pointsAdded = pac.addPoints(-5);
         return new PointsAddedAnimation(pointsAdded);
     }

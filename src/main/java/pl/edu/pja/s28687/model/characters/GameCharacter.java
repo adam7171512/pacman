@@ -1,5 +1,6 @@
 package pl.edu.pja.s28687.model.characters;
 
+import pl.edu.pja.s28687.gui.animations.IRenderingInstructions;
 import pl.edu.pja.s28687.model.GameModel;
 import pl.edu.pja.s28687.model.logistics.Cell;
 import pl.edu.pja.s28687.model.logistics.CellPair;
@@ -12,32 +13,33 @@ import java.awt.*;
 import java.util.Queue;
 
 public abstract class GameCharacter extends GameObject implements Runnable {
-    protected final static int CELL_TRAVEL_DISTANCE = 100;
 
-    protected GameModel gameModel;
     private final int defaultSpeed;
     private final Color defaultColor;
+    private final boolean defaultHarmful;
+    private final IRenderingInstructions renderingInstructions;
+    protected GameModel gameModel;
     protected boolean isDead;
     protected int speed;
     protected int dx;
     protected int dy;
+    protected Cell currentCell;
+    protected boolean gameOver;
     int lives;
     int startRow;
     int startCol;
-    protected Cell currentCell;
+    boolean newMatch;
     private CellPair cellPair;
     private boolean immortal;
     private Color color;
     private boolean visualToggle;
     private UpgradeManager upgradeManager = null;
-    private final boolean defaultHarmful;
     private boolean harmful;
     private boolean paused;
-    protected boolean gameOver;
-    boolean newMatch;
 
-    public GameCharacter(GameModel gameModel, int speed, int lives, Color color, int startRow, int startCol, boolean defaultHarmful) {
+    public GameCharacter(GameModel gameModel, int speed, int lives, Color color, int startRow, int startCol, boolean defaultHarmful, IRenderingInstructions renderingInstructions) {
         setUpgradeManager(new UpgradeManager(this));
+        this.renderingInstructions = renderingInstructions;
         this.gameModel = gameModel;
         this.startRow = startRow;
         this.startCol = startCol;
@@ -59,17 +61,19 @@ public abstract class GameCharacter extends GameObject implements Runnable {
             try {
                 move();
             } catch (InterruptedException e) {
-                endGame();
+                throw new RuntimeException(e);
             }
         }
         endGame();
     }
 
+    public void render(Coordinates coordinates, Graphics g, int cellSize) {
+        this.renderingInstructions.render(this, coordinates, cellSize, g);
+    }
+
     protected void endGame() {
         this.cellPair.leaveCells(this);
         this.cellPair.clearCells();
-        this.cellPair = null;
-        this.gameModel = null;
     }
 
     protected void setDefaultParameters() {
@@ -137,17 +141,13 @@ public abstract class GameCharacter extends GameObject implements Runnable {
 
     abstract Cell getNextCell();
 
-//    protected abstract int[] getDirections();
-
-    public abstract void draw(Coordinates coordinates, Graphics g, int cellSize);
-
     public int switchCells(Cell currentCell, Cell newCell, int dx, int dy, int sleepTime) throws InterruptedException {
         int time = 0;
         cellPair.add(newCell);
 
-        int distanceMultiplier = Math.max(speed * CELL_TRAVEL_DISTANCE / 20, 1);
-        int end_posX = CELL_TRAVEL_DISTANCE * dx;
-        int end_posY = CELL_TRAVEL_DISTANCE * dy;
+        int distanceMultiplier = Math.max(speed * 100 / 20, 1);
+        int end_posX = 100 * dx;
+        int end_posY = 100 * dy;
         time += travelBetweenCells(
                 currentCell,
                 newCell,
@@ -155,7 +155,7 @@ public abstract class GameCharacter extends GameObject implements Runnable {
                 0,
                 -end_posX,
                 -end_posY,
-                CELL_TRAVEL_DISTANCE / 2,
+                100 / 2,
                 distanceMultiplier,
                 dx,
                 dy,
@@ -176,7 +176,7 @@ public abstract class GameCharacter extends GameObject implements Runnable {
                 end_posY / 2,
                 -end_posX / 2,
                 -end_posY / 2,
-                CELL_TRAVEL_DISTANCE / 2,
+                100 / 2,
                 distanceMultiplier,
                 dx,
                 dy,
@@ -273,12 +273,12 @@ public abstract class GameCharacter extends GameObject implements Runnable {
         return null;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
     public Color getColor() {
         return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     public int getSpeed() {
@@ -300,12 +300,12 @@ public abstract class GameCharacter extends GameObject implements Runnable {
         }
     }
 
-    public void setImmortal(boolean immortal) {
-        this.immortal = immortal;
-    }
-
     public boolean isImmortal() {
         return immortal;
+    }
+
+    public void setImmortal(boolean immortal) {
+        this.immortal = immortal;
     }
 
     public void setUpgradeManager(UpgradeManager upgradeManager) {
@@ -321,12 +321,12 @@ public abstract class GameCharacter extends GameObject implements Runnable {
         this.gameOver = gameOver;
     }
 
-    public void setHarmful(boolean b) {
-        this.harmful = b;
-    }
-
     public boolean isHarmful() {
         return harmful;
+    }
+
+    public void setHarmful(boolean b) {
+        this.harmful = b;
     }
 
     public boolean isPaused() {
@@ -341,5 +341,11 @@ public abstract class GameCharacter extends GameObject implements Runnable {
         this.newMatch = newMatch;
     }
 
+    public int[] getDirections() {
+        return new int[]{dx, dy};
+    }
 
+    public boolean isDead() {
+        return isDead;
+    }
 }

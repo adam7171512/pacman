@@ -1,8 +1,8 @@
 package pl.edu.pja.s28687.model.logistics;
 
 import pl.edu.pja.s28687.model.characters.GameCharacter;
-import pl.edu.pja.s28687.model.logistics.Cell;
 
+// Used to validate character movement
 public class CellPair {
 
     private Cell cell1;

@@ -1,7 +1,7 @@
 package pl.edu.pja.s28687.model.collectables;
 
 import pl.edu.pja.s28687.gui.animations.IAnimated;
-import pl.edu.pja.s28687.gui.animations.MagicPotionAnimationInteraction;
+import pl.edu.pja.s28687.gui.animations.MagicPotionAnimation;
 import pl.edu.pja.s28687.model.characters.Pac;
 import pl.edu.pja.s28687.model.upgrades.GodModeUpgrade;
 import pl.edu.pja.s28687.model.upgrades.SpeedUpgrade;
@@ -32,7 +32,7 @@ public class MagicPotion extends Collectable {
         pac.addUpgrade(new GodModeUpgrade(40));
         pac.addUpgrade(new SpeedUpgrade(20));
         pac.frightenEnemies();
-        return new MagicPotionAnimationInteraction();
+        return new MagicPotionAnimation();
     }
 
     @Override

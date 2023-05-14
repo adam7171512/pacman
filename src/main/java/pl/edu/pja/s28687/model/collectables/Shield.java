@@ -1,7 +1,7 @@
 package pl.edu.pja.s28687.model.collectables;
 
 import pl.edu.pja.s28687.gui.animations.IAnimated;
-import pl.edu.pja.s28687.gui.animations.ShieldAnimationInteraction;
+import pl.edu.pja.s28687.gui.animations.ShieldAnimation;
 import pl.edu.pja.s28687.model.characters.Pac;
 import pl.edu.pja.s28687.model.upgrades.ImmortalUpgrade;
 
@@ -30,7 +30,7 @@ public class Shield extends Collectable {
     public Shield() {
         super();
         animationFrames = 200;
-        pacInteractionAnimation = new ShieldAnimationInteraction();
+        pacInteractionAnimation = new ShieldAnimation();
     }
 
     @Override

@@ -15,6 +15,9 @@ public class RouteFindingAlgorithm {
         if (lastCell != null) {
             neighbours.remove(lastCell);
         }
+        if (neighbours.isEmpty()){
+            return lastCell;
+        }
 
         Cell nextcell = null;
 

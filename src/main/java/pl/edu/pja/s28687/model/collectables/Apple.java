@@ -26,7 +26,7 @@ public class Apple extends Collectable {
 
     @Override
     public IAnimated affectPac(Pac pac) {
-        int pointsAdded = pac.addPoints(4);
+        int pointsAdded = pac.addPoints(50);
         return new PointsAddedAnimation(pointsAdded);
     }
 

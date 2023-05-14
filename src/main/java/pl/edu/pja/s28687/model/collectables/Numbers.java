@@ -28,13 +28,13 @@ public class Numbers extends Collectable {
     @Override
     public IAnimated affectPac(Pac pac) {
         pac.addPoints(20);
-        pac.multiplyPointsMultiplier(MULTIPLIER);
-        pac.numbers();
+        pac.multiplyScoreMultiplier(MULTIPLIER);
+        pac.renderNumbers();
         new Thread(() -> {
             try {
                 Thread.sleep(7000);
-                pac.numbers();
-                pac.multiplyPointsMultiplier((double) 1 /MULTIPLIER);
+                pac.renderNumbers();
+                pac.multiplyScoreMultiplier((double) 1 /MULTIPLIER);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

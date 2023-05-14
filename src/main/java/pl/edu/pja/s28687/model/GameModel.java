@@ -90,9 +90,11 @@ public class GameModel {
         pacGameView.updateScore(points, multiplier);
     }
 
-    public void addPoints(int points) {
-        score += points * scoreMultiplier;
+    public int addPoints(int points) {
+        int pointsToAdd = points * scoreMultiplier;
+        score += pointsToAdd;
         updateScore(score, scoreMultiplier);
+        return pointsToAdd;
     }
 
     private void createPac() {
@@ -203,11 +205,11 @@ public class GameModel {
         timeThread.start();
     }
 
-    public void flip() {
+    public void flipBoard() {
         pacGameView.flip();
     }
 
-    public void numbersRenderer() {
+    public void renderNumbers() {
         pacGameView.numbersRenderer();
     }
 
@@ -229,8 +231,8 @@ public class GameModel {
         return scoreMultiplier;
     }
 
-    public void setScoreMultiplier(double scoreMultiplier) {
-        this.scoreMultiplier = (int) scoreMultiplier;
+    public void multiplyScoreMultiplier(double scoreMultiplier) {
+        this.scoreMultiplier *= scoreMultiplier;
     }
 
     public synchronized int[] getDirections() {
@@ -269,7 +271,10 @@ public class GameModel {
     }
 
     public Cell getNextCell(Npc npc){
-        if (this.pac == null || npc == null) {
+        if (this.pac == null
+                || npc == null
+                || this.pac.getCurrentCell() == null
+                || npc.getCurrentCell() == null) {
             return null;
         }
         return RouteFindingAlgorithm.nextCell(

@@ -5,9 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d5c1625-68d3-4598-ba61-199bc178e318" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacCellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacGameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacNumberCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacNumberCellRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/StatsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/StatsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/FreezeAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/FreezeAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/GhostKilledAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/GhostKilledAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/IAnimated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/IAnimated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/MagicPotionAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/MagicPotionAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PacKilledAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PacKilledAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PointsAddedAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/PointsAddedAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ScoreMultiplierAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ScoreMultiplierAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ShieldAnimationInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/ShieldAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/TurboAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/animations/TurboAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/GameCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Ghost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Npc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Npc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Pac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Pac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Dynamite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Dynamite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Flower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/MagicPotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/MagicPotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Numbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Numbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Shield.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Shield.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/CellPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/CellPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/MazeAlgo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/MazeAlgo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/RouteFindingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/RouteFindingAlgorithm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +47,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -33,24 +64,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Main">
+}</component>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.edu.pja.s28687.Main" />
       <module name="Pacman" />
@@ -101,27 +133,9 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
-    <configuration name=" [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+    <configuration name="Pacman [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
-        <option name="myGeneralSettings">
-          <MavenGeneralSettings>
-            <option name="alwaysUpdateSnapshots" value="false" />
-            <option name="checksumPolicy" value="NOT_SET" />
-            <option name="failureBehavior" value="NOT_SET" />
-            <option name="localRepository" value="$MAVEN_REPOSITORY$" />
-            <option name="mavenHome" value="Bundled (Maven 3)" />
-            <option name="nonRecursive" value="false" />
-            <option name="outputLevel" value="INFO" />
-            <option name="pluginUpdatePolicy" value="DEFAULT" />
-            <option name="printErrorStackTraces" value="false" />
-            <option name="showDialogWithAdvancedSettings" value="false" />
-            <option name="threads" />
-            <option name="useMavenConfig" value="false" />
-            <option name="usePluginRegistry" value="false" />
-            <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
-            <option name="workOffline" value="false" />
-          </MavenGeneralSettings>
-        </option>
+        <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
@@ -130,6 +144,7 @@
             </option>
             <option name="goals">
               <list>
+                <option value="clean" />
                 <option value="install" />
               </list>
             </option>
@@ -138,7 +153,7 @@
               <map />
             </option>
             <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/../GUI22" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
@@ -175,7 +190,7 @@
       <item itemvalue="Gradle.Unnamed" />
       <item itemvalue="JAR Application.Unnamed" />
       <item itemvalue="Maven.Pacman [install]" />
-      <item itemvalue="Maven. [install]" />
+      <item itemvalue="Maven.Pacman [clean,install]" />
     </list>
     <recent_temporary>
       <list>
@@ -193,6 +208,8 @@
       <option name="presentableId" value="Default" />
       <updated>1683901780929</updated>
       <workItem from="1683901782319" duration="25304000" />
+      <workItem from="1684013926926" duration="1203000" />
+      <workItem from="1684065092515" duration="5691000" />
     </task>
     <servers />
   </component>
