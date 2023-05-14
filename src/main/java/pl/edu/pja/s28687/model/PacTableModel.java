@@ -23,7 +23,6 @@ public class PacTableModel extends AbstractTableModel {
                 setValueAt(cells[i][j], i, j);
             }
         }
-        System.out.println(cells[1][0].getRow() + " " + cells[1][0].getCol());
     }
 
     @Override
