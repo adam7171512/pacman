@@ -32,7 +32,7 @@ public class PacNumberCellRenderer extends DefaultTableCellRenderer implements T
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
 
-        int cellSize = getWidth();
+        int cellSize = getHeight();
         g2d.setFont(new Font("Arial", Font.PLAIN, cellSize / 3));
 
         if (!cell.canEnter()) {

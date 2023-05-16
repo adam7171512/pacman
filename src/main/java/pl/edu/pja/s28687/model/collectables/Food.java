@@ -10,7 +10,8 @@ public class Food extends Collectable {
     @Override
     public void draw(Graphics g, int cellSize) {
         g.setColor(Color.YELLOW);
-        g.fillOval(cellSize / 2, cellSize / 2, cellSize / 7, cellSize / 7);
+        int foodSize = Math.max(cellSize / 6, 1);
+        g.fillOval(cellSize / 2, cellSize / 2, foodSize, foodSize);
     }
 
     @Override

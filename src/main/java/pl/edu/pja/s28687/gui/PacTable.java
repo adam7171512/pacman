@@ -26,6 +26,9 @@ public class PacTable extends JTable {
         setVisible(true);
         setOpaque(true);
         addResizeListener();
+        for (int i = 0; i < getColumnCount(); i++) {
+            getColumnModel().getColumn(i).setMinWidth(1);
+        }
     }
 
     private void addResizeListener() {
@@ -38,10 +41,8 @@ public class PacTable extends JTable {
     }
 
     private void updateRowHeights() {
-        int columnWidth = getWidth() / getColumnCount();
-        for (int i = 0; i < getRowCount(); i++) {
-            setRowHeight(i, columnWidth);
-        }
+        int width = getColumnModel().getColumn(0).getWidth();
+        setRowHeight(width);
     }
 
     public void flipBoard() {

@@ -44,7 +44,7 @@ public class PacCellRenderer extends DefaultTableCellRenderer implements TableCe
         super.paintComponent(g);
 
         Graphics2D g2d = (Graphics2D) g;
-        int cellSize = getWidth();
+        int cellSize = getHeight();
 
         if (!cell.canEnter()) {
             g.drawImage(wallImage, 0, 0, cellSize, cellSize, null);

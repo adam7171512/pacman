@@ -21,7 +21,7 @@ public class GhostRenderingInstructions implements IRenderingInstructions {
         int ghostWidth = (int) (0.9 * cellSize);
         int arcGap = (int) (cellSize * 0.2);
         int arcOffset = (int) (cellSize * 0.8);
-        arcOffset = gameCharacter.visualToggle() ? arcOffset - 2 : arcOffset + 2;
+        arcOffset = (int) (gameCharacter.visualToggle() ? arcOffset - 0.05 *cellSize : arcOffset + 0.05 *cellSize);
         int arcHeight = (int) (cellSize * 0.35);
 
         int ghostWhiteEyeVerticalOffset = (int) (cellSize * 0.2);
