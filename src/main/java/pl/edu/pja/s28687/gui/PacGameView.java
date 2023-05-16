@@ -14,16 +14,11 @@ import java.time.LocalDate;
 
 public class PacGameView {
 
-    private static double defaultFrameWidth = 1920;
-    private static double defaultBoardHeight = 900;
-    private double aspectRatio;
+    private final GameModel gameModel;
+    private final MainMenu mainMenu;
     private JFrame frame;
     private StatsPanel statsPanel;
-
-    private final GameModel gameModel;
-
     private PacTable pacTable;
-    private final MainMenu mainMenu;
 
     public PacGameView(GameModel gameModel, MainMenu mainMenu) {
         this.mainMenu = mainMenu;
@@ -33,67 +28,56 @@ public class PacGameView {
 
     public void generateGUI() {
 
+        frame = new JFrame("PacMan");
         pacTable = new PacTable(gameModel.getPacTableModel());
-        int rows = pacTable.getRowCount();
-        int cols = pacTable.getColumnCount();
-
-        if(rows > 50) {
-            defaultBoardHeight = 1200;
-        }
-        if(cols > 50) {
-            defaultFrameWidth = 2560;
-        }
-        double tableAspectRatio = (double) cols / rows;
-
-        double startingBoardWidth;
-        double startingBoardHeight;
-        if ( (double) cols / rows > defaultFrameWidth / defaultBoardHeight) {
-            startingBoardWidth = defaultFrameWidth;
-            startingBoardHeight = defaultFrameWidth / tableAspectRatio;
-        } else {
-            startingBoardHeight = defaultBoardHeight;
-            startingBoardWidth = defaultBoardHeight * tableAspectRatio;
-        }
-
-
-        double statsPanelHeight = startingBoardHeight / 10;
-        aspectRatio = startingBoardWidth / (startingBoardHeight + statsPanelHeight);
-
         statsPanel = new StatsPanel();
 
-        frame = new JFrame("PacMan");
-        frame.setSize((int) startingBoardWidth, (int) (startingBoardHeight + statsPanelHeight));
-        frame.setSize((int) startingBoardWidth, (int) (startingBoardHeight + statsPanelHeight));
+        int rows = pacTable.getRowCount();
+        int cols = pacTable.getColumnCount();
+        // desired stats panel height will be 10% of the board height
+        double desiredAspectRatio = (double) cols / (rows * 1.1);
+
+        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenWidth = (int) dimension.getWidth();
+        int screenHeight = (int) dimension.getHeight();
+        double screenAspectRatio = (double) screenWidth / screenHeight;
+
+        double defaultFrameWidth;
+        double defaultFrameHeight;
+        if (desiredAspectRatio > screenAspectRatio) {
+            defaultFrameWidth = 0.8 * screenWidth;
+            defaultFrameHeight = defaultFrameWidth / desiredAspectRatio;
+        } else {
+            defaultFrameHeight = 0.8 * screenHeight;
+            defaultFrameWidth = defaultFrameHeight * desiredAspectRatio;
+        }
+
+        frame.setSize((int) defaultFrameWidth, (int) defaultFrameHeight);
         frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
         frame.getContentPane().add(pacTable);
         frame.getContentPane().add(statsPanel.getPanel());
 
-
-        pacTable.addKeyListener(new PacKeyListener(gameModel));
-
         //Todo: it works on mac but doesn't work well on windows, try to fix it.
 //        frame.addComponentListener(new ComponentAdapter() {
-//            private Rectangle rectangle = frame.getBounds();
+//            private Rectangle rectangle;
 //
 //            @Override
 //            public void componentResized(ComponentEvent e) {
-//                Rectangle newRectangle = e.getComponent().getBounds();
-//                if (rectangle.equals(newRectangle)) {
+//                Rectangle newRectangle = frame.getBounds();
+//                if (rectangle != null && rectangle.equals(newRectangle)) {
 //                    return;
 //                }
 //                rectangle = newRectangle;
-//                e.getComponent().setBounds(newRectangle.x, newRectangle.y, newRectangle.width, (int) (newRectangle.width / aspectRatio));
+//                frame.setBounds(newRectangle.x, newRectangle.y, newRectangle.width, (int) (newRectangle.width / desiredAspectRatio));
 //            }
 //        });
 
-        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
-        int y = (int) ((dimension.getHeight() - frame.getHeight()) / 2);
-        frame.setLocation(x, y);
-
+        frame.setLocation((int) (screenWidth - defaultFrameWidth) / 2, (int) ((screenHeight - defaultFrameHeight) / 2));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.requestFocus();
+
+        pacTable.addKeyListener(new PacKeyListener(gameModel));
     }
 
     public void updateScore(int score, int multiplier) {
@@ -130,10 +114,14 @@ public class PacGameView {
                             showHighScores();
                         }
                     }
+
                     @Override
-                    public void keyPressed(KeyEvent e) {}
+                    public void keyPressed(KeyEvent e) {
+                    }
+
                     @Override
-                    public void keyReleased(KeyEvent e) {}
+                    public void keyReleased(KeyEvent e) {
+                    }
                 });
                 add(textField, BorderLayout.SOUTH);
                 pack();
