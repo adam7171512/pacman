@@ -18,7 +18,6 @@ import java.util.List;
 
 public class GameModel {
     private final PacTableModel pacTableModel;
-    private Cell[][] cellArray;
 
     private PacGameView pacGameView;
     private Thread timeThread;
@@ -60,7 +59,7 @@ public class GameModel {
 
     public void generateMaze(int width, int height, boolean withBorders, MazeAlgo mazeAlgo) {
         mazesWithBorders = withBorders;
-        cellArray = mazeAlgo.generateMaze(width, height, withBorders);
+        Cell[][] cellArray = mazeAlgo.generateMaze(width, height, withBorders);
         pacTableModel.setCells(cellArray);
     }
 
@@ -100,7 +99,10 @@ public class GameModel {
     }
 
     private void createPac() {
-        int row = cellArray[getRowCount() - 1][getColumnCount() / 2].canEnter() ? getRowCount() - 1 : getRowCount() - 2;
+        int row = getCell(getRowCount() - 1, getColumnCount()/2).canEnter() ?
+                getRowCount() - 1
+                :
+                getRowCount() - 2;
         pac = new Pac(this, row, getColumnCount() / 2);
         gameCharacterList.add(pac);
     }
@@ -206,6 +208,7 @@ public class GameModel {
             }
         });
         timeThread.start();
+        updateScore(score, scoreMultiplier);
     }
 
     public void flipBoard() {
@@ -230,12 +233,9 @@ public class GameModel {
         this.directions = directions;
     }
 
-    public int getScoreMultiplier() {
-        return scoreMultiplier;
-    }
-
     public void multiplyScoreMultiplier(double scoreMultiplier) {
         this.scoreMultiplier *= scoreMultiplier;
+        updateScore(score, this.scoreMultiplier);
     }
 
     public synchronized int[] getDirections() {
@@ -284,7 +284,7 @@ public class GameModel {
                 npc.getCurrentCell(),
                 npc.getLastCell(),
                 pac.getCurrentCell(),
-                cellArray,
+                pacTableModel.getCells(),
                 this.npcDirections);
     }
 

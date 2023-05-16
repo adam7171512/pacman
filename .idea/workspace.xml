@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9d5c1625-68d3-4598-ba61-199bc178e318" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/MazeAlgo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/logistics/MazeAlgo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/PacTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/PacTableModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +184,8 @@
       <workItem from="1684172283574" duration="4717000" />
       <workItem from="1684186263226" duration="2000" />
       <workItem from="1684226785038" duration="4403000" />
-      <workItem from="1684248429351" duration="10202000" />
+      <workItem from="1684248429351" duration="10707000" />
+      <workItem from="1684267598269" duration="646000" />
     </task>
     <servers />
   </component>

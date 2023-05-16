@@ -61,4 +61,8 @@ public class PacTableModel extends AbstractTableModel {
         initCells();
         fireTableDataChanged();
     }
+
+    public Cell[][] getCells() {
+        return cells;
+    }
 }
