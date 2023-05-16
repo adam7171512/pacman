@@ -72,8 +72,9 @@ public class MainMenu {
                     }
                     int rows = boardSize[0];
                     int cols = boardSize[1];
+                    boolean withBorders = boardSize[2] == 1;
                     try {
-                        new PacGame(mainMenu, rows, cols);
+                        new PacGame(mainMenu, rows, cols, withBorders);
                     } catch (InterruptedException ex) {
                         throw new RuntimeException(ex);
                     }
@@ -136,12 +137,14 @@ public class MainMenu {
     private int[] askForBoardSize() {
         JTextField width = new JTextField();
         JTextField height = new JTextField();
+        JCheckBox borders = new JCheckBox("With borders");
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.add(new JLabel("Rows: (min 10, max 100)"));
         panel.add(width);
         panel.add(new JLabel("Columns (min 10, max 100):"));
         panel.add(height);
+        panel.add(borders);
         int result = JOptionPane.showConfirmDialog(null, panel, "Enter board size", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
         if (result == JOptionPane.OK_OPTION) {
             try {
@@ -151,7 +154,7 @@ public class MainMenu {
                 JOptionPane.showMessageDialog(null, "Board size must be a integer", "Error", JOptionPane.ERROR_MESSAGE);
                 return askForBoardSize();
             }
-            int[] boardSize = new int[]{Integer.parseInt(width.getText()), Integer.parseInt(height.getText())};
+            int[] boardSize = new int[]{Integer.parseInt(width.getText()), Integer.parseInt(height.getText()), borders.isSelected() ? 1 : 0};
             if (!validateBoardSizeInput(boardSize)) {
                 JOptionPane.showMessageDialog(null, "Numbers must be between 10 and 100", "Error", JOptionPane.ERROR_MESSAGE);
                 return askForBoardSize();

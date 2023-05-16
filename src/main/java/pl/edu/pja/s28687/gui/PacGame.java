@@ -6,9 +6,9 @@ import pl.edu.pja.s28687.model.GameModel;
 
 public class PacGame {
 
-    public PacGame(MainMenu mainMenu, int rows, int cols) throws InterruptedException {
+    public PacGame(MainMenu mainMenu, int rows, int cols, boolean withBorders) throws InterruptedException {
         GameModel gameModel = new GameModel();
-        gameModel.generateMaze(rows, cols);
+        gameModel.generateMaze(rows, cols, withBorders);
         PacGameView pacGameView = new PacGameView(gameModel, mainMenu);
         gameModel.setPacGameView(pacGameView);
         pacGameView.startGame();

@@ -37,6 +37,7 @@ public class GameModel {
     private int timeLeft;
     private boolean gameOver;
     private int[] directions = new int[2];
+    private boolean mazesWithBorders;
 
     public GameModel() {
         pacTableModel = new PacTableModel();
@@ -52,13 +53,14 @@ public class GameModel {
     }
 
 
-    public void generateMaze(int width, int height) {
+    public void generateMaze(int width, int height, boolean withBorders) {
         MazeAlgo mazeAlgo = new MazeAlgo();
-        generateMaze(width, height, mazeAlgo);
+        generateMaze(width, height, withBorders, mazeAlgo);
     }
 
-    public void generateMaze(int width, int height, MazeAlgo mazeAlgo) {
-        cellArray = mazeAlgo.generateMaze(width, height);
+    public void generateMaze(int width, int height, boolean withBorders, MazeAlgo mazeAlgo) {
+        mazesWithBorders = withBorders;
+        cellArray = mazeAlgo.generateMaze(width, height, withBorders);
         pacTableModel.setCells(cellArray);
     }
 
@@ -98,7 +100,8 @@ public class GameModel {
     }
 
     private void createPac() {
-        pac = new Pac(this, getRowCount() - 1, getColumnCount() / 2);
+        int row = cellArray[getRowCount() - 1][getColumnCount() / 2].canEnter() ? getRowCount() - 1 : getRowCount() - 2;
+        pac = new Pac(this, row, getColumnCount() / 2);
         gameCharacterList.add(pac);
     }
 
@@ -162,7 +165,7 @@ public class GameModel {
         for (GameCharacter gameCharacter : gameCharacterList) {
             gameCharacter.setPaused(true);
         }
-        generateMaze(getRowCount(), getColumnCount());
+        generateMaze(getRowCount(), getColumnCount(), mazesWithBorders);
         createFood();
         timeLeft = 120;
         for (GameCharacter gameCharacter : gameCharacterList) {

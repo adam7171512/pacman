@@ -4,8 +4,8 @@ import java.util.*;
 
 public class MazeAlgo {
 
-    public Cell[][] generateMaze(int rows, int cols) {
-        CellArray cellArray = new CellArray(rows, cols);
+    public Cell[][] generateMaze(int rows, int cols, boolean withBorders) {
+        CellArray cellArray = new CellArray(rows, cols, withBorders);
         CellNode[][] cellNodes = cellArray.mirrorAndFill();
         Cell[][] cells = new Cell[rows][cols];
         for (int i = 0; i < cellNodes.length; i++) {
@@ -19,6 +19,10 @@ public class MazeAlgo {
             }
         }
         return cells;
+    }
+
+    public Cell[][] generateMaze(int rows, int cols){
+        return generateMaze(rows, cols, false);
     }
 
     // helper class
@@ -91,7 +95,7 @@ public class MazeAlgo {
         private final int requestedCols;
         public CellNode[][] cellNodes;
 
-        public CellArray(int rows, int cols) {
+        public CellArray(int rows, int cols, boolean withBorders) {
             this.requestedRows = rows;
             this.requestedCols = cols;
             // only half of the columns gets created, other half is going to be mirrored
@@ -102,6 +106,16 @@ public class MazeAlgo {
             cellNodes[rows / 2][halfCols].isWall = true;
             cellNodes[rows / 2][halfCols - 1].isWall = true;
             cellNodes[rows / 2][halfCols - 2].isWall = true;
+
+            if (withBorders){
+                for (int i = 0; i < rows; i++) {
+                    cellNodes[i][0].isWall = true;
+                }
+                for (int i = 0; i < halfCols + 1; i++) {
+                    cellNodes[0][i].isWall = true;
+                    cellNodes[rows - 1][i].isWall = true;
+                }
+            }
             build(cellNodes);
         }
 
