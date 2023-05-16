@@ -66,6 +66,10 @@ public class MainMenu {
                 addActionListener(e -> {
                     frame.setVisible(false);
                     int[] boardSize = askForBoardSize();
+                    if (boardSize == null) {
+                        frame.setVisible(true);
+                        return;
+                    }
                     int rows = boardSize[0];
                     int cols = boardSize[1];
                     try {
