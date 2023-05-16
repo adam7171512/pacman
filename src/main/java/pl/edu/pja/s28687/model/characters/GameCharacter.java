@@ -53,7 +53,6 @@ public abstract class GameCharacter extends GameObject implements Runnable {
         this.speed = speed;
         this.defaultHarmful = defaultHarmful;
         this.harmful = defaultHarmful;
-        immortal = false;
     }
 
     public void run() {
