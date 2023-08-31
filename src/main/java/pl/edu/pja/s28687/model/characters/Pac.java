@@ -25,6 +25,11 @@ public class Pac extends GameCharacter implements Runnable {
     protected Cell getNextCell() {
         Cell cell = null;
         do {
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             int[] directions = gameModel.getDirections();
             int _x = currentCell.getCol() + directions[0];
             int _y = currentCell.getRow() + directions[1];
