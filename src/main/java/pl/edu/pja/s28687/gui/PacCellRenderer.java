@@ -2,8 +2,6 @@ package pl.edu.pja.s28687.gui;
 
 import pl.edu.pja.s28687.gui.animations.IAnimated;
 import pl.edu.pja.s28687.model.characters.GameCharacter;
-import pl.edu.pja.s28687.model.characters.Npc;
-import pl.edu.pja.s28687.model.characters.Pac;
 import pl.edu.pja.s28687.model.collectables.Collectable;
 import pl.edu.pja.s28687.model.logistics.Cell;
 import pl.edu.pja.s28687.model.logistics.Coordinates;
@@ -11,14 +9,13 @@ import pl.edu.pja.s28687.model.logistics.Coordinates;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
 
-public class PacCellRenderer extends DefaultTableCellRenderer implements TableCellRenderer {
+public class PacCellRenderer extends DefaultTableCellRenderer {
     private static final Image wallImage;
 
     static {
