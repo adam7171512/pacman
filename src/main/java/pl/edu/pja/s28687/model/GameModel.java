@@ -125,7 +125,7 @@ public class GameModel {
                 if (!getCell(i, j).canEnter()) {
                     continue;
                 }
-                Food food = new Food();
+                Food food = Food.getInstance();
                 getCell(i, j).addCollectable(Food.getInstance());
                 foodLeft++;
             }
