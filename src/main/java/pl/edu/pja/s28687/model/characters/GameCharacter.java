@@ -149,7 +149,7 @@ public abstract class GameCharacter extends GameObject implements Runnable {
         int time = 0;
         cellPair.add(newCell);
 
-        int distanceMultiplier = Math.max(speed * 100 / 20, 1);
+        int distanceMultiplier = Math.max(speed * 5, 1);
         int end_posX = 100 * dx;
         int end_posY = 100 * dy;
         time += travelBetweenCells(
