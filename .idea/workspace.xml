@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9d5c1625-68d3-4598-ba61-199bc178e318" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacCellRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/gui/PacCellRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/GameModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/PacTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/PacTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/GameCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Pac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/characters/Pac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pja/s28687/model/collectables/Food.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="af896e28-84c6-4fdb-8f3c-ef308df13b32" />
+        <option name="url" value="git@github.com:adam7171512/pacman.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -185,7 +201,16 @@
       <workItem from="1684186263226" duration="2000" />
       <workItem from="1684226785038" duration="4403000" />
       <workItem from="1684248429351" duration="10707000" />
-      <workItem from="1684267598269" duration="646000" />
+      <workItem from="1684267598269" duration="1485000" />
+      <workItem from="1684359339523" duration="5745000" />
+      <workItem from="1684492395252" duration="1260000" />
+      <workItem from="1684705741265" duration="1747000" />
+      <workItem from="1685378910325" duration="605000" />
+      <workItem from="1685922960478" duration="1548000" />
+      <workItem from="1685925197923" duration="226000" />
+      <workItem from="1685958976491" duration="7000" />
+      <workItem from="1686160318145" duration="3148000" />
+      <workItem from="1689968392461" duration="4631000" />
     </task>
     <servers />
   </component>
