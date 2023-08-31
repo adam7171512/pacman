@@ -7,6 +7,14 @@ import pl.edu.pja.s28687.model.characters.Pac;
 import java.awt.*;
 
 public class Food extends Collectable {
+    private static final Food instance = new Food();
+
+    private Food() {}
+
+    public static Food getInstance() {
+        return instance;
+    }
+
     @Override
     public void draw(Graphics g, int cellSize) {
         g.setColor(Color.YELLOW);

@@ -126,7 +126,7 @@ public class GameModel {
                     continue;
                 }
                 Food food = new Food();
-                getCell(i, j).addCollectable(food);
+                getCell(i, j).addCollectable(Food.getInstance());
                 foodLeft++;
             }
         }
